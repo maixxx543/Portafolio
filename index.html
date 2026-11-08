@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CAMBIA: título y descripción para buscadores -->
+  <title>Maikel Mojica — Desarrollador Web</title>
+  <meta name="description" content="Portafolio de Maikel Mojica, desarrollador web que construye experiencias digitales rápidas y memorables." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fondo animado (canvas de partículas) -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="glow glow-1" aria-hidden="true"></div>
+  <div class="glow glow-2" aria-hidden="true"></div>
+
+  <!-- ================= NAVEGACIÓN ================= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <!-- CAMBIA: tus iniciales o logo -->
+      <a href="#inicio" class="nav__logo">MJ<span>.</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav__links" id="navLinks">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#contacto" class="nav__cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero__content">
+        <p class="eyebrow reveal">// Sistema en línea · Disponible para proyectos</p>
+        <!-- CAMBIA: tu nombre y frase principal -->
+        <h1 class="hero__title reveal">
+          Hola, soy <span class="gradient-text">Maikel Mojica</span>
+        </h1>
+        <p class="hero__role reveal">
+          Desarrollador Web <span class="typed" id="typed"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero__lead reveal">
+          Diseño y construyo experiencias digitales rápidas, accesibles y con impacto visual.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn--ghost">Hablemos</a>
+        </div>
+      </div>
+      <a href="#sobre-mi" class="scroll-hint" aria-label="Bajar"><span></span></a>
+    </section>
+
+    <!-- ================= SOBRE MÍ ================= -->
+    <section class="section" id="sobre-mi">
+      <div class="container about">
+        <div class="about__frame reveal">
+          <div class="about__avatar"><img src="static/mi-foto.jpg" alt="Maikel"></div>
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+        </div>
+        <div class="about__text">
+          <p class="eyebrow reveal">01 · Sobre mí</p>
+          <h2 class="section__title reveal">Construyo el futuro, <span class="gradient-text">línea a línea</span></h2>
+
+          <p class="reveal">
+            Soy desarrollador web desde Venezuela. Me apasiona transformar ideas en productos digitales
+            que se sienten fluidos, intuitivos y memorables.
+          </p>
+          <p class="reveal">
+            Combino diseño y código para crear interfaces limpias, con rendimiento y detalle en cada interacción.
+          </p>
+          <div class="stats reveal">
+            <!-- CAMBIA: tus cifras -->
+            <div><strong data-count="1">0</strong><span>Años de experiencia</span></div>
+            <div><strong data-count="5">0</strong><span>Proyectos</span></div>
+            <div><strong data-count="5">0</strong><span>Clientes felices</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYECTOS ================= -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <p class="eyebrow reveal">02 · Misiones completadas</p>
+        <h2 class="section__title reveal">Proyectos <span class="gradient-text">Épicos</span></h2>
+
+        <div class="projects">
+          <article class="card reveal">
+            <div class="card__media">📊</div>
+            <div class="card__body">
+              <h3>CensoPoblacional.py</h3>
+              <p>Sistema de escritorio en Python (Tkinter) y SQLite para la gestión de datos censales comunitarios en el Municipio Junín, con interfaz CRUD y reportes.</p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>Tkinter</li>
+                <li>SQLite</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://github.com/maixxx543/Censo-poblacional" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media">⚙️</div>
+            <div class="card__body">
+              <h3>Alimentador Automático ESP32</h3>
+              <p>Dispositivo IoT para dispensar alimento controlado con servomotor de 360°, tornillo sinfín e interfaz web local.</p>
+              <ul class="tags">
+                <li>C++</li>
+                <li>ESP32</li>
+                <li>PlatformIO</li>
+                <li>HTML/JS</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://github.com/maixxx543/Alimentador-ESP32" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media">🛒</div>
+            <div class="card__body">
+              <h3>Tienda Tecnológica</h3>
+              <p>Sistema de gestión y catálogo interactivo para tienda de productos tecnológicos, enfocado en el control de inventario y procesamiento de datos.</p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>HTML/CSS</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://github.com/maixxx543/tienda_tecnologica" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media">🏬</div>
+            <div class="card__body">
+              <h3>Ferretería & Vidriería</h3>
+              <p>Aplicación web full-stack comercial tipo catálogo y cotizador interactivo, integrada con base de datos en la nube y gestión de inventario en tiempo real.</p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <li>Flask</li>
+                <li>Supabase</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://ferreteria-mm.onrender.com/" target="_blank" rel="noopener">Demo ↗</a>
+                <span class="tag-private">Código Privado 🔒</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media">📱</div>
+            <div class="card__body">
+              <h3>Gestor de Cuentas por Cobrar (Android)</h3>
+              <p>Aplicación móvil multi-usuario para la gestión de créditos en tiempo real. Sincroniza datos al instante entre dispositivos mediante Supabase para el control administrativo del negocio.</p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>Flet</li>
+                <li>Supabase</li>
+                <li>Realtime DB</li>
+                <li>Android</li>
+              </ul>
+              
+              <div class="card__links card__links-apk">
+                <span style="font-size: 0.82rem; opacity: 0.8;">Capturas de la App:</span>
+                <div class="carousel-links">
+                  <a href="img/apk/login.jpeg" target="_blank" rel="noopener">Login</a>
+                  <a href="img/apk/menu_haburguesa.jpeg" target="_blank" rel="noopener">Menú</a>
+                  <a href="img/apk/deudas.jpeg" target="_blank" rel="noopener">Deudas</a>
+                  <a href="img/apk/estadisticas.jpeg" target="_blank" rel="noopener">Estadísticas</a>
+                  <a href="img/apk/auditoria.jpeg" target="_blank" rel="noopener">Auditoría</a>
+                  <a href="img/apk/cuentas_pagadas.jpeg" target="_blank" rel="noopener">Pagadas</a>
+                  <a href="img/apk/reportes_deudores.jpeg" target="_blank" rel="noopener">Reportes</a>
+                </div>
+                <div class="apk-footer-info">
+                  <span class="tag-private" style="font-size: 0.8rem;">Proyecto Privado 🔒</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STACK ================= -->
+<section class="section" id="stack">
+      <div class="container">
+        <p class="eyebrow reveal">03 · Arsenal</p>
+        <h2 class="section__title reveal">Tech <span class="gradient-text">Stack</span></h2>
+        <div class="stack">
+          <!-- Frontend & Apps -->
+          <div class="stack__group reveal">
+            <h3>Frontend & Apps</h3>
+            <ul>
+              <li>HTML5 / CSS3</li>
+              <li>JavaScript</li>
+              <li>Python (Flet / Tkinter)</li>
+              <li>Ren'Py</li>
+            </ul>
+          </div>
+          <!-- Backend & Base de Datos -->
+          <div class="stack__group reveal">
+            <h3>Backend & Cloud</h3>
+            <ul>
+              <li>Python (Flask)</li>
+              <li>Supabase (Realtime)</li>
+              <li>SQLite / SQL</li>
+              <li>REST APIs</li>
+            </ul>
+          </div>
+          <!-- Hardware & Herramientas -->
+          <div class="stack__group reveal">
+            <h3>Hardware & DevTools</h3>
+            <ul>
+              <li>C++ / Arduino IDE</li>
+              <li>PlatformIO / ESP32</li>
+              <li>Git & GitHub</li>
+              <li>Render</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow reveal">04 · Transmisión</p>
+          <h2 class="section__title reveal">¿Construimos algo <span class="gradient-text">legendario</span>?</h2>
+          <p class="reveal">Estoy abierto a nuevos proyectos, colaboraciones y oportunidades de desarrollo.</p>
+          <!-- Tus enlaces de contacto reales -->
+          <ul class="socials reveal">
+            <li><a href="mailto:maikelmaixxx@gmail.com">✉ maikelmaixxx@gmail.com</a></li>
+            <li><a href="https://github.com/maixxx543" target="_blank" rel="noopener">GitHub ↗</a></li>
+          </ul>
+        </div>
+        <!-- El formulario -->
+        <form class="form reveal" id="contactForm" novalidate>
+          <label>Nombre<input type="text" name="name" required placeholder="Tu nombre" /></label>
+          <label>Correo<input type="email" name="email" required placeholder="tu@email.com" /></label>
+          <label>Mensaje<textarea name="message" rows="5" required placeholder="Cuéntame tu idea..."></textarea></label>
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- CAMBIA: tu nombre -->
+    <p>© <span id="year"></span> Maikel Mojica · Hecho con código y café.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
